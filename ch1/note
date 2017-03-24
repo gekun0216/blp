@@ -1,4 +1,22 @@
-directories:
+dirs:
   applications: /usr/local/bin, /opt
   header files: /usr/include
   standard sys lib: /lib, /usr/lib
+
+gcc command:
+  # -c, compile to obj file, but not link to exc file.
+  gcc -c *.c 
+  gcc -c *.c -Inon_standard_include_path
+  # -o: output
+  gcc -o exec_file_name/ *.c
+
+  # like shortcut of specifying lib file
+  -l
+  # similar to -I, add non_standard_lib_path
+  -L
+
+  gcc -o caller caller.o libch1.a
+  gcc -o caller caller.o -L. -lch1  
+  
+  # generate assembly file
+  gcc -s *.c
