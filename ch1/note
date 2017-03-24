@@ -1,0 +1,4 @@
+directories:
+  applications: /usr/local/bin, /opt
+  header files: /usr/include
+  standard sys lib: /lib, /usr/lib
